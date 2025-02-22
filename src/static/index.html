@@ -5,11 +5,89 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Gallery</title>
+  <style>
+    .container {
+      width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .wrapper-image {
+      padding: 20px;
+      position: relative;
+    }
+
+    .btn-prev {
+      display: none;
+      position: absolute;
+      z-index: 4;
+    }
+
+    .big-image {
+      width: 35%;
+      position: absolute;
+      z-index: 3;
+      object-fit: cover;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .btn-next {
+      display: none;
+      position: absolute;
+      z-index: 5;
+    }
+
+    .main {
+      top: 0;
+    }
+
+    .group-image {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .thumb {
+      width: 200px;
+      cursor: pointer;
+      border: 3px solid transparent;
+      border-radius: 5px;
+      transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    }
+
+    .thumb:hover {
+      border-color: deeppink;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
-<h1>
-  Sass template
-</h1>
+<div class="container">
+  <div class="wrapper-image">
+    <div class="wrapper-big-img">
+      <span class="btn-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50"  height="50" viewBox="0 0 24 24"><title>Artboard-50</title><g id="Left-2" data-name="Left"><path d="M14.383,7.076a1,1,0,0,0-1.09.217l-4,4a1,1,0,0,0,0,1.414l4,4A1,1,0,0,0,15,16V8A1,1,0,0,0,14.383,7.076Z" style="fill:deeppink;"/></g></svg>
+      </span>
+
+
+      <img src="" class="big-image main">
+      <span class="btn-next">
+         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><title>Artboard-49</title><g id="Right-2" data-name="Right"><path d="M14.707,11.293l-4-4A1,1,0,0,0,9,8v8a1,1,0,0,0,1.707.707l4-4A1,1,0,0,0,14.707,11.293Z" style="fill:deeppink"/></g></svg>
+      </span>
+
+    </div>
+    <div class="group-image wrapper">
+      <img src="Image/Peony.jpg" class="thumb">
+      <img src="Image/Spring-flower.jpg" class="thumb">
+      <img src="Image/White-flower.jpg" class="thumb">
+      <img src="Image/Roseee.jpg" class="thumb">
+      <img src="Image/Rose-flower.jpg" class="thumb">
+      <img src="Image/Peonies.jpg" class="thumb">
+
+    </div>
+  </div>
+</div>
+
+<script src="index.js"></script>
 </body>
 </html>
